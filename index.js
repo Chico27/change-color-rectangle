@@ -23,7 +23,6 @@ window.onload = function() {
   sprinkle();
 }
 
-//現在時刻を表示する関数
 function sprinkle(){
   ct = 1;
   // console.log(ct);
