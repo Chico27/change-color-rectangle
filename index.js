@@ -25,16 +25,34 @@ window.onload = function() {
 //現在時刻を表示する関数
 function sprinkle(){
   ct = 1;
+  // console.log(ct);
+  // console.log(colorString);
+  let colorString = setColor();
   while(ct <= maxRectangle){
-    randomNum = Math.random();
-    if (randomNum < 0.5){
+    let colorString = setColor();
+    // randomNum = Math.random();
+    // if (randomNum < 0.5){
       let attr = document.getElementById("black_rectangele_" + ct);
-      if (!attr.classList.contains('box_disappear')) {
-        attr.classList.add("box_disappear");
-      } else {
-        attr.classList.remove("box_disappear");
-      }
-    }
+      // if (!attr.classList.contains('box_disappear')) {
+        attr.style.background = colorString;
+        console.log(colorString);
+      // } else {
+      //   attr.classList.remove("box_disappear");
+      // }
+    // }
     ct++;
+  };
+}
+
+function setColor(){
+
+  let colorString = "#";
+
+  for (let i = 0;i < 6; i++){
+    colornum = Math.floor(Math.random()*16);
+    colorString += colornum.toString(16);
+    // console.log(colorString);
   }
+
+  return colorString;
 }
