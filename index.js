@@ -20,6 +20,7 @@ window.onload = function() {
     const div2 = document.createElement('div');
     document.body.appendChild(div2);
   }
+  sprinkle();
 }
 
 //現在時刻を表示する関数
